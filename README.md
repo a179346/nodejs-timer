@@ -16,11 +16,11 @@ const { Timer } = require('nodejs-timer');
 [Github page](https://github.com/a179346/nodejs-timer)
 
 # Usage
-  * [Construction](##Construction)
-  * [start](##start)
-  * [clear (stop)](##clear(stop))
-  * [isRunning](##isRunning)
-  * [trigger](##trigger)
+  * [Construction](#Construction)
+  * [start](#start)
+  * [clear (stop)](#clearstop)
+  * [isRunning](#isRunning)
+  * [trigger](#trigger)
 ## Construction
 #### `new Timer(timeoutEvent)` -> `Timer`
 ```js
