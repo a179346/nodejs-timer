@@ -16,6 +16,7 @@ export class Timer {
   public start (ms: number, param: any): boolean {
     if (this.timeoutIdx !== null) return false;
     this.timeoutIdx = setTimeout(() => {
+      if(this.timeoutIdx === null) return;
       this.timeoutIdx = null;
       this.trigger(param);
     }, ms);

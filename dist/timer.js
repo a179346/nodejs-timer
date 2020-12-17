@@ -14,6 +14,8 @@ var Timer = /** @class */ (function () {
         if (this.timeoutIdx !== null)
             return false;
         this.timeoutIdx = setTimeout(function () {
+            if (_this.timeoutIdx === null)
+                return;
             _this.timeoutIdx = null;
             _this.trigger(param);
         }, ms);
