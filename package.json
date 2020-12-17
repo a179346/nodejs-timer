@@ -1,0 +1,34 @@
+{
+  "name": "nodejs-timer",
+  "version": "1.0.0",
+  "description": "Timer for Node.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha -b --timeout 10000 ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a179346/nodejs-timer.git"
+  },
+  "keywords": [
+    "timer",
+    "timeout",
+    "time",
+    "stopwatch"
+  ],
+  "author": "a179346",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a179346/nodejs-timer/issues"
+  },
+  "homepage": "https://github.com/a179346/nodejs-timer#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
