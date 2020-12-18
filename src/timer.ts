@@ -9,11 +9,11 @@ export class Timer {
     this.timeoutIdx = null;
   }
 
-  public trigger (param: any): void {
+  public trigger (param?: any): void {
     this.timeoutEvent(param);
   }
 
-  public start (ms: number, param: any): boolean {
+  public start (ms: number, param?: any): boolean {
     if (this.timeoutIdx !== null) return false;
     this.timeoutIdx = setTimeout(() => {
       if(this.timeoutIdx === null) return;
