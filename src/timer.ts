@@ -1,24 +1,24 @@
-type TimeoutEvent = (param:any) => void;
+type TimeoutEvent<T extends any[]> = (...params:T) => void;
 
-export class Timer {
-  private timeoutEvent: TimeoutEvent;
+export class Timer<T extends any[]> {
+  private timeoutEvent: TimeoutEvent<T>;
   private timeoutIdx: number |　null;
 
-  constructor (timeoutEvent: TimeoutEvent) {
+  constructor (timeoutEvent: TimeoutEvent<T>) {
     this.timeoutEvent = timeoutEvent;
     this.timeoutIdx = null;
   }
 
-  public trigger (param?: any): void {
-    this.timeoutEvent(param);
+  public trigger (...params: T): void {
+    this.timeoutEvent(...params);
   }
 
-  public start (ms: number, param?: any): boolean {
+  public start (ms: number, ...params: T): boolean {
     if (this.timeoutIdx !== null) return false;
     this.timeoutIdx = setTimeout(() => {
       if(this.timeoutIdx === null) return;
       this.timeoutIdx = null;
-      this.trigger(param);
+      this.trigger(...params);
     }, ms);
     return true;
   }

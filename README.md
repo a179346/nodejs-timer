@@ -29,14 +29,14 @@ const timer = new Timer((param) => {
   console.log(param);
 });
 ```
-##### timeoutEvent
+##### timeoutEvent<T extends any[]>
 *Required*  
-Type: `(param: any) => void;`
+Type: `(...params: T) => void;`
 
 ---
 
 ## start
-#### `timer.start(ms, param)` -> `boolean`
+#### `timer.start(ms, ...params)` -> `boolean`
 Returns false if the timer is already running. otherwise, return true.
 ```js
 // start the timer
@@ -46,10 +46,10 @@ timer.start(1000, 'Hello nodejs-timer');
 *Required*  
 Type: `number`   
 Desc: milliseconds to trigger timeoutEvent
-##### param
+##### ...params
 *Optional*  
-Type: `any`   
-Desc: Parameter pass to timeoutEvent
+Type: `T extends any[]`   
+Desc: Parameters pass to timeoutEvent
 
 ---
 
@@ -74,12 +74,12 @@ timer.isRunning();
 ---
 
 ## trigger
-#### `timer.trigger(param)` -> `void`
+#### `timer.trigger(...params)` -> `void`
 ```js
 // trigger the timeoutEvent
 timer.trigger('Hello nodejs-timer from trigger');
 ```
-##### param
+##### ...params
 *Optional*  
-Type: `any`   
-Desc: Parameter pass to timeoutEvent
+Type: `T extends any[]`   
+Desc: Parameters pass to timeoutEvent
