@@ -1,6 +1,6 @@
 {
   "name": "nodejs-timer",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Timer for Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
